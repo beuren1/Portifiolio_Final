@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Sobre | Josué Beuren</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header id="header">
+  <div class="header-inner">
+
+    <a href="index.html" class="logo">JB</a>
+
+    <nav class="main-nav">
+      <a href="about.html">Sobre</a>
+      <a href="index.html#projetos">projetos</a>
+      <a href="#">blog</a>
+      <a href="contact.html">contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-btn">PT / EN</button>
+
+      <a href="#" class="social-link">in</a>
+      <a href="#" class="social-link">f</a>
+      <a href="#" class="social-link">w</a>
+    </div>
+
+  </div>
+</header>
+
+<!-- SOBRE -->
+
+<section class="about-section reveal">
+
+  <div class="about-container">
+
+    <div class="about-text slide-from-left">
+
+      <h2>Quem sou eu?</h2>
+
+      <p class="about-lead">
+        Sou desenvolvedor front-end e estudante de programação focado em criar interfaces modernas e experiências visuais bonitas.
+      </p>
+
+      <p>
+        Atualmente estudo desenvolvimento Full Stack Python pela EBAC e desenvolvo projetos reais para construir meu portfólio profissional.
+      </p>
+
+      <p>
+        Gosto de aprender criando projetos práticos, explorando design moderno, animações e experiências interativas para web.
+      </p>
+
+    </div>
+
+    <div class="about-image slide-from-right">
+
+      <video class="about-video" controls autoplay muted loop>
+        <source src="assets/video1.mp4" type="video/mp4">
+      </video>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- GALERIA -->
+
+<section class="about-gallery">
+
+  <div class="gallery-container">
+
+    <img src="assets/foto5.jpg">
+    <img src="assets/foto1.png">
+    <img src="assets/foto2.png">
+    <img src="assets/foto3.png">
+    <img src="assets/foto4.jpg">
+
+  </div>
+
+</section>
+
+<!-- FATOS -->
+
+<section class="facts-section reveal">
+
+  <div class="facts-container">
+
+    <div class="facts-image slide-from-left">
+
+      <img src="assets/curiosidade.png">
+
+    </div>
+
+    <div class="facts-text slide-from-right">
+
+      <h2>Fatos curiosos sobre mim</h2>
+
+      <ul class="facts-list">
+        <li>Sou mestre de RPG de mesa</li>
+        <li>Toco guitarra e baixo</li>
+        <li>Adoro filmes e séries</li>
+        <li>Gosto de criar coisas novas</li>
+        <li>Aprendo criando projetos reais</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section class="skills-section">
+
+  <div class="skills-container">
+
+    <h2>Soft skills</h2>
+
+    <div class="skills-chart">
+
+      <div class="skill skill1">
+        <span>95%</span>
+        <p>Trabalho em equipe</p>
+      </div>
+
+      <div class="skill skill2">
+        <span>90%</span>
+        <p>Comunicação</p>
+      </div>
+
+      <div class="skill skill3">
+        <span>92%</span>
+        <p>Criatividade</p>
+      </div>
+
+      <div class="skill skill4">
+        <span>75%</span>
+        <p>Resolução de problemas</p>
+      </div>
+
+      <div class="skill skill5">
+        <span>88%</span>
+        <p>Aprendizado rápido</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="parts-section reveal">
+
+  <div class="parts-container">
+
+    <div class="part-left slide-from-left">
+      <h2>Front-end developer</h2>
+
+      <ul>
+        <li>HTML5 semântico</li>
+        <li>CSS3 responsivo</li>
+        <li>JavaScript moderno</li>
+        <li>React.js</li>
+        <li>Styled Components</li>
+        <li>Redux Toolkit</li>
+        <li>Consumo de APIs REST</li>
+        <li>Git & GitHub</li>
+        <li>UI responsiva</li>
+        <li>Figma para desenvolvimento</li>
+      </ul>
+    </div>
+
+    <div class="parts-image reveal">
+      <img src="assets/foto6.png" alt="Skills">
+    </div>
+
+    <div class="part-right slide-from-right">
+      <h2>Python & Back-end</h2>
+
+      <ul>
+        <li>Python</li>
+        <li>Django</li>
+        <li>Flask</li>
+        <li>SQL & PostgreSQL</li>
+        <li>Prisma ORM</li>
+        <li>Docker</li>
+        <li>APIs com FastAPI</li>
+        <li>Autenticação JWT</li>
+        <li>CRUD completo</li>
+        <li>Deploy de aplicações</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer id="footer">
+
+  <div class="footer-inner">
+
+    <p>© 2026 Josué Beuren</p>
+
+    <div class="footer-nav">
+      <a href="about.html">sobre</a>
+      <a href="index.html#projetos">projetos</a>
+      <a href="#">blog</a>
+      <a href="contact.html">contato</a>
+    </div>
+
+  </div>
+
+</footer>
+
+<script>
+
+const reveals = document.querySelectorAll('.reveal')
+
+function revealOnScroll() {
+
+  reveals.forEach((section) => {
+
+    const windowHeight = window.innerHeight
+    const revealTop = section.getBoundingClientRect().top
+
+    if(revealTop < windowHeight - 100){
+      section.classList.add('active')
+    }
+
+  })
+
+}
+
+window.addEventListener('scroll', revealOnScroll)
+
+revealOnScroll()
+
+</script>
+
+</body>
+</html>
