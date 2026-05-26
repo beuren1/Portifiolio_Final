@@ -6,23 +6,33 @@
 
   <title>JB | Contato</title>
 
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="contact.css">
+
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-<header class="contact-header">
+<header id="header">
 
-  <div class="header-container">
+  <div class="header-inner">
 
     <a href="index.html" class="logo">JB</a>
 
-    <nav>
-      <a href="about.html">sobre</a>
-      <a href="projects.html">projetos</a>
-      <a href="#">blog</a>
-      <a href="contact.html" class="active">contato</a>
+    <nav class="main-nav">
+      <a href="about.html" data-i18n="navAbout">sobre</a>
+      <a href="projects.html" data-i18n="navProjects">projetos</a>
+      <a href="contact.html" class="active" data-i18n="navContact">contato</a>
     </nav>
+
+    <div class="header-actions">
+      <button class="lang-btn">PT / EN</button>
+
+      <a href="#" class="social-link">in</a>
+      <a href="#" class="social-link">f</a>
+      <a href="#" class="social-link">w</a>
+    </div>
 
   </div>
 
@@ -32,33 +42,29 @@
 
   <div class="contact-left">
 
-    <h1>Contato</h1>
+    <h1 data-i18n="contactTitle">Contato</h1>
 
-    <p>
+    <p data-i18n="contactText">
       Entre em contato comigo pelas redes sociais
       ou envie uma mensagem diretamente.
     </p>
 
     <div class="social-grid">
 
-      
-
-      <a href="https://www.linkedin.com/in/josue-beuren/" class="social-card linkedin">
+      <a href="https://www.linkedin.com/in/josue-beuren/" target="_blank" class="social-card linkedin">
         <span>in</span>
         <p>LinkedIn</p>
       </a>
 
-      <a href="https://www.instagram.com/emaxter123456/" class="social-card instagram">
+      <a href="https://www.instagram.com/emaxter123456/" target="_blank" class="social-card instagram">
         <span>◎</span>
         <p>Instagram</p>
       </a>
 
-      <a href="shttps://discord.com/channels/@me" class="social-card discord">
+      <a href="https://discord.com/" target="_blank" class="social-card discord">
         <span>🎮</span>
         <p>Discord</p>
       </a>
-
-      
 
     </div>
 
@@ -76,7 +82,7 @@
 
   <div class="form-container">
 
-    <h2>Me envie um email</h2>
+    <h2 data-i18n="emailTitle">Me envie um email</h2>
 
     <form>
 
@@ -84,27 +90,25 @@
 
         <div class="input-group">
 
-          <label>Nome</label>
+          <label data-i18n="nameLabel">Nome</label>
+          <input type="text" data-i18n-placeholder="namePlaceholder" placeholder="Seu nome">
 
-          <input type="text">
-
-          <label>Email</label>
-
-          <input type="email">
+          <label data-i18n="emailLabel">Email</label>
+          <input type="email" data-i18n-placeholder="emailPlaceholder" placeholder="Seu email">
 
         </div>
 
         <div class="input-group">
 
-          <label>Mensagem</label>
+          <label data-i18n="messageLabel">Mensagem</label>
 
-          <textarea></textarea>
+          <textarea data-i18n-placeholder="messagePlaceholder" placeholder="Digite sua mensagem"></textarea>
 
         </div>
 
       </div>
 
-      <button type="submit">Enviar email</button>
+      <button type="submit" data-i18n="sendButton">Enviar email</button>
 
     </form>
 
@@ -112,18 +116,18 @@
 
 </section>
 
-<footer class="contact-footer">
+<footer id="footer">
 
-  <div class="footer-container">
+  <div class="footer-inner">
 
     <p>© 2026 Josué Beuren</p>
 
-    <nav>
-      <a href="about.html">sobre</a>
-      <a href="projects.html">projetos</a>
-      <a href="#">blog</a>
-      <a href="contact.html">contato</a>
-    </nav>
+    <div class="footer-nav">
+      <a href="about.html" data-i18n="navAbout">sobre</a>
+      <a href="projects.html" data-i18n="navProjects">projetos</a>
+      <a href="#" data-i18n="navBlog">blog</a>
+      <a href="contact.html" data-i18n="navContact">contato</a>
+    </div>
 
   </div>
 

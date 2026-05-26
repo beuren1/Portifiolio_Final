@@ -6,35 +6,43 @@
 
   <title>JB | Projetos</title>
 
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="projects.css">
+
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-<header class="projects-header">
-
-  <div class="header-container">
+<header id="header">
+  <div class="header-inner">
 
     <a href="index.html" class="logo">JB</a>
 
-    <nav>
-      <a href="about.html">sobre</a>
-      <a href="projects.html" class="active">projetos</a>
-      <a href="#">blog</a>
-      <a href="contact.html">contato</a>
+    <nav class="main-nav">
+      <a href="about.html" data-i18n="navAbout">sobre</a>
+      <a href="projects.html" class="active" data-i18n="navProjects">projetos</a>
+      <a href="contact.html" data-i18n="navContact">contato</a>
     </nav>
 
-  </div>
+    <div class="header-actions">
+      <button class="lang-btn">PT / EN</button>
 
+      <a href="#" class="social-link">in</a>
+      <a href="#" class="social-link">f</a>
+      <a href="#" class="social-link">w</a>
+    </div>
+
+  </div>
 </header>
 
 <section class="portfolio-hero">
 
   <div class="portfolio-text">
 
-    <h1>Portfolio</h1>
+    <h1 data-i18n="portfolioTitle">Portfolio</h1>
 
-    <p>
+    <p data-i18n="portfolioText">
       Confira alguns projetos que desenvolvi
       durante meus estudos e prática profissional.
     </p>
@@ -48,18 +56,21 @@
   <div class="projects-grid">
 
     <article class="project-card">
+
       <img src="assets/foto7.png" alt="Loja de Cosméticos">
 
       <div class="project-info">
-        <h3>Loja de Cosméticos</h3>
+
+        <h3 data-i18n="projPage1Title">Loja de Cosméticos</h3>
+
         <span>HTML / CSS / JavaScript</span>
 
-        <p>
+        <p data-i18n="projPage1Text1">
           Site de catálogo para venda de cosméticos, com seções de produtos,
           categorias, contato e layout responsivo.
         </p>
 
-        <p>
+        <p data-i18n="projPage1Text2">
           Foi desenvolvido com HTML semântico, CSS personalizado e JavaScript
           para interações básicas da página.
         </p>
@@ -68,22 +79,27 @@
           <a href="https://github.com/beuren1/Perfume" target="_blank">GitHub</a>
           <a href="https://perfume-amber.vercel.app/" target="_blank">Vercel</a>
         </div>
+
       </div>
+
     </article>
 
     <article class="project-card">
+
       <img src="assets/foto9.png" alt="Projeto eFood">
 
       <div class="project-info">
-        <h3>Projeto eFood</h3>
+
+        <h3 data-i18n="projPage2Title">Projeto eFood</h3>
+
         <span>React / Styled Components / API</span>
 
-        <p>
+        <p data-i18n="projPage2Text1">
           Aplicação inspirada em delivery de restaurantes, exibindo cards,
           categorias e informações vindas de uma API.
         </p>
 
-        <p>
+        <p data-i18n="projPage2Text2">
           Foi feita com React, Styled Components, React Router e consumo de API
           para renderização dinâmica dos dados.
         </p>
@@ -92,22 +108,27 @@
           <a href="https://github.com/beuren1/E-food" target="_blank">GitHub</a>
           <a href="https://efood-ebac-nu.vercel.app/" target="_blank">Vercel</a>
         </div>
+
       </div>
+
     </article>
 
     <article class="project-card">
+
       <img src="assets/foto10.png" alt="Loja de Roupas">
 
       <div class="project-info">
-        <h3>Loja de Roupas</h3>
+
+        <h3 data-i18n="projPage3Title">Loja de Roupas</h3>
+
         <span>Landing Page / CSS / UI</span>
 
-        <p>
+        <p data-i18n="projPage3Text1">
           Página de apresentação para uma loja de roupas, com foco visual em
           produtos, categorias e identidade da marca.
         </p>
 
-        <p>
+        <p data-i18n="projPage3Text2">
           Foi criada com HTML e CSS, trabalhando organização de seções,
           responsividade e composição visual dos cards.
         </p>
@@ -116,22 +137,27 @@
           <a href="https://github.com/beuren1/LandingPageStore" target="_blank">GitHub</a>
           <a href="https://landing-page-store-ten.vercel.app/" target="_blank">Vercel</a>
         </div>
+
       </div>
+
     </article>
 
     <article class="project-card">
+
       <img src="assets/foto8.png" alt="Landing Page Evento">
 
       <div class="project-info">
-        <h3>Landing Page Evento</h3>
+
+        <h3 data-i18n="projPage4Title">Landing Page Evento</h3>
+
         <span>HTML / CSS / Layout Responsivo</span>
 
-        <p>
+        <p data-i18n="projPage4Text1">
           Landing page simples para divulgação de evento, com chamada principal,
           informações, preço, localização e botão de ação.
         </p>
 
-        <p>
+        <p data-i18n="projPage4Text2">
           Foi desenvolvida usando HTML, CSS e estrutura responsiva para adaptar
           o conteúdo em diferentes tamanhos de tela.
         </p>
@@ -140,25 +166,27 @@
           <a href="https://github.com/beuren1/ebac_tech_talks" target="_blank">GitHub</a>
           <a href="https://ebac-tech-talks-jade-three.vercel.app/" target="_blank">Vercel</a>
         </div>
+
       </div>
+
     </article>
 
   </div>
 
 </section>
 
-<footer class="projects-footer">
+<footer id="footer">
 
-  <div class="footer-container">
+  <div class="footer-inner">
 
     <p>© 2026 Josué Beuren</p>
 
-    <nav>
-      <a href="about.html">sobre</a>
-      <a href="projects.html">projetos</a>
-      <a href="#">blog</a>
-      <a href="contact.html">contato</a>
-    </nav>
+    <div class="footer-nav">
+      <a href="about.html" data-i18n="navAbout">sobre</a>
+      <a href="projects.html" data-i18n="navProjects">projetos</a>
+      <a href="#" data-i18n="navBlog">blog</a>
+      <a href="contact.html" data-i18n="navContact">contato</a>
+    </div>
 
   </div>
 
