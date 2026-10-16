@@ -409,4 +409,30 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', revealOnScroll)
 
   revealOnScroll()
+<<<<<<< HEAD
 })
+=======
+})
+
+const track = document.querySelector('.projects-track')
+
+if (track) {
+  track.innerHTML += track.innerHTML
+
+  let position = 0
+
+  function animateProjects() {
+    position -= 0.5
+
+    if (Math.abs(position) >= track.scrollWidth / 2) {
+      position = 0
+    }
+
+    track.style.transform = `translateX(${position}px)`
+
+    requestAnimationFrame(animateProjects)
+  }
+
+  animateProjects()
+}
+>>>>>>> 01eeb0b (update portfolio)
