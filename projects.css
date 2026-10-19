@@ -16,11 +16,124 @@ body{
   background:#111;
 }
 
+<<<<<<< HEAD
 .header-container{
   width:88%;
   max-width:1200px;
   height:100%;
   margin:0 auto;
+=======
+/* =========================
+   LANDING PAGE SLIDER
+========================= */
+
+.landing-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.landing-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+
+  animation: landingScroll 35s linear infinite;
+}
+
+.landing-slider:hover .landing-track {
+  animation-play-state: paused;
+}
+
+.landing-track .project-card {
+  width: 320px;
+  min-width: 320px;
+  flex-shrink: 0;
+}
+
+
+/* movimento infinito */
+
+@keyframes landingScroll {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 12px));
+  }
+
+}
+
+
+/* efeito de sombra nas laterais */
+
+.landing-slider::before,
+.landing-slider::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  width: 100px;
+  height: 100%;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+.landing-slider::before {
+
+  left: 0;
+
+  background: linear-gradient(to right,
+      #f5f5f5,
+      transparent);
+}
+
+.landing-slider::after {
+
+  right: 0;
+
+  background: linear-gradient(to left,
+      #f5f5f5,
+      transparent);
+}
+
+
+/* celular */
+
+@media (max-width: 768px) {
+
+  .landing-track {
+    gap: 16px;
+
+    animation-duration: 25s;
+  }
+
+  .landing-track .project-card {
+    width: 280px;
+    min-width: 280px;
+  }
+
+  .landing-slider::before,
+  .landing-slider::after {
+    width: 40px;
+  }
+
+}
+
+.header-container {
+  width: 88%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+>>>>>>> 90f9096 (first commit)
 
   display:flex;
   align-items:center;
