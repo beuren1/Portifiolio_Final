@@ -1,42 +1,280 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  font-family:Arial, Helvetica, sans-serif;
-  background:#f7f7f7;
-  color:#111;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f7f7;
+  color: #111;
 }
 
-.projects-header{
-  width:100%;
-  height:100px;
-  background:#111;
-}
 
-<<<<<<< HEAD
-.header-container{
-  width:88%;
-  max-width:1200px;
-  height:100%;
-  margin:0 auto;
-=======
 /* =========================
-   LANDING PAGE SLIDER
+   HEADER
+========================= */
+
+.projects-header {
+  width: 100%;
+  height: 100px;
+  background: #111;
+}
+
+.header-container {
+  width: 88%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 68px;
+  height: 68px;
+
+  border-radius: 50%;
+
+  background: #fff;
+  color: #111;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Georgia, serif;
+  font-size: 34px;
+  font-weight: 900;
+  font-style: italic;
+
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 36px;
+}
+
+nav a,
+nav a:visited {
+  color: #fff;
+  text-decoration: none;
+  font-size: 19px;
+
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  opacity: 0.55;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.portfolio-hero {
+  background: #efefef;
+
+  padding: 120px 0 90px;
+
+  text-align: center;
+}
+
+.portfolio-text h1 {
+  font-size: 86px;
+  font-weight: 900;
+
+  color: #2d2d2d;
+
+  margin-bottom: 20px;
+}
+
+.portfolio-text p {
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  font-size: 22px;
+  line-height: 1.6;
+
+  color: #666;
+}
+
+
+/* =========================
+   CATEGORIAS
+========================= */
+
+.project-category {
+  width: 100%;
+
+  padding: 70px 0;
+}
+
+.category-title {
+  width: 88%;
+  max-width: 1200px;
+
+  margin: 0 auto 35px;
+
+  font-size: 38px;
+  font-weight: 800;
+
+  color: #222;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.project-card {
+  background: #fff;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.project-card img {
+  width: 100%;
+  height: 260px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.project-info {
+  padding: 30px;
+}
+
+.project-info h2,
+.project-info h3 {
+  margin-bottom: 10px;
+
+  font-size: 28px;
+
+  color: #222;
+}
+
+.project-info span {
+  display: block;
+
+  margin-bottom: 22px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  color: #888;
+}
+
+.project-info p {
+  margin-bottom: 16px;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  color: #555;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.project-buttons {
+  display: flex;
+
+  gap: 16px;
+
+  margin-top: 26px;
+
+  flex-wrap: wrap;
+}
+
+.project-buttons a,
+.project-buttons a:visited {
+  padding: 12px 22px;
+
+  border-radius: 40px;
+
+  background: #111;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  transition: 0.3s;
+}
+
+.project-buttons a:hover {
+  opacity: 0.75;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.projects-grid {
+  width: 88%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 36px;
+}
+
+
+/* =========================
+   CARROSSEL LANDING PAGES
 ========================= */
 
 .landing-slider {
   width: 100%;
+
   overflow: hidden;
+
   position: relative;
+
   padding: 20px 0;
 }
 
 .landing-track {
   display: flex;
+
+  flex-wrap: nowrap;
+
+  align-items: stretch;
+
   gap: 24px;
+
   width: max-content;
 
   animation: landingScroll 35s linear infinite;
@@ -47,16 +285,16 @@ body{
 }
 
 .landing-track .project-card {
-  width: 320px;
-  min-width: 320px;
-  flex-shrink: 0;
+  width: 360px;
+  min-width: 360px;
+
+  flex: 0 0 360px;
 }
 
 
-/* movimento infinito */
+/* Movimento infinito */
 
 @keyframes landingScroll {
-
   from {
     transform: translateX(0);
   }
@@ -64,22 +302,20 @@ body{
   to {
     transform: translateX(calc(-50% - 12px));
   }
-
 }
 
 
-/* efeito de sombra nas laterais */
+/* Sombras laterais */
 
 .landing-slider::before,
 .landing-slider::after {
-
   content: "";
 
   position: absolute;
 
   top: 0;
 
-  width: 100px;
+  width: 80px;
   height: 100%;
 
   z-index: 5;
@@ -88,27 +324,134 @@ body{
 }
 
 .landing-slider::before {
-
   left: 0;
 
-  background: linear-gradient(to right,
-      #f5f5f5,
-      transparent);
+  background: linear-gradient(
+    to right,
+    #f7f7f7,
+    transparent
+  );
 }
 
 .landing-slider::after {
-
   right: 0;
 
-  background: linear-gradient(to left,
-      #f5f5f5,
-      transparent);
+  background: linear-gradient(
+    to left,
+    #f7f7f7,
+    transparent
+  );
 }
 
 
-/* celular */
+/* =========================
+   FOOTER
+========================= */
+
+#footer {
+  width: 100%;
+
+  background: #111;
+
+  color: #fff;
+
+  padding: 45px 0;
+}
+
+.footer-inner {
+  width: 88%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.footer-inner p {
+  margin: 0;
+
+  color: #fff;
+}
+
+.footer-nav {
+  display: flex;
+
+  gap: 28px;
+}
+
+.footer-nav a,
+.footer-nav a:visited {
+  color: #fff;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.footer-nav a:hover {
+  opacity: 0.65;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+  .header-container {
+    justify-content: center;
+
+    gap: 30px;
+  }
+
+  .header-container nav {
+    display: none;
+  }
+
+  .portfolio-text h1 {
+    font-size: 54px;
+  }
+
+  .portfolio-text p {
+    width: 88%;
+
+    font-size: 18px;
+  }
+
+  .category-title {
+    font-size: 32px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+
+    gap: 24px;
+
+    text-align: center;
+  }
+}
+
 
 @media (max-width: 768px) {
+
+  .project-category {
+    padding: 45px 0;
+  }
+
+  .category-title {
+    width: 90%;
+
+    font-size: 28px;
+  }
 
   .landing-track {
     gap: 16px;
@@ -119,216 +462,33 @@ body{
   .landing-track .project-card {
     width: 280px;
     min-width: 280px;
+
+    flex: 0 0 280px;
   }
 
   .landing-slider::before,
   .landing-slider::after {
-    width: 40px;
+    width: 35px;
   }
 
-}
-
-.header-container {
-  width: 88%;
-  max-width: 1200px;
-  height: 100%;
-  margin: 0 auto;
->>>>>>> 90f9096 (first commit)
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.logo{
-  width:68px;
-  height:68px;
-  border-radius:50%;
-  background:#fff;
-  color:#111;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-family:Georgia, serif;
-  font-size:34px;
-  font-weight:900;
-  font-style:italic;
-  text-decoration:none;
-}
-
-nav{
-  display:flex;
-  gap:36px;
-}
-
-nav a{
-  color:#fff;
-  text-decoration:none;
-  font-size:19px;
-  transition:.3s;
-}
-
-nav a:hover,
-nav a.active{
-  opacity:.55;
-}
-
-.portfolio-hero{
-  background:#efefef;
-  padding:120px 0 90px;
-  text-align:center;
-}
-
-.portfolio-text h1{
-  font-size:86px;
-  font-weight:900;
-  color:#2d2d2d;
-  margin-bottom:20px;
-}
-
-.portfolio-text p{
-  font-size:22px;
-  line-height:1.6;
-  color:#666;
-  max-width:620px;
-  margin:0 auto;
-}
-
-.projects-grid-section{
-  padding:90px 0;
-}
-
-.projects-grid{
-  width:88%;
-  max-width:1200px;
-  margin:0 auto;
-
-  display:grid;
-  grid-template-columns:repeat(2, 1fr);
-  gap:36px;
-}
-
-.project-card{
-  background:#fff;
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 8px 24px rgba(0,0,0,.08);
-  transition:.3s;
-}
-
-.project-card:hover{
-  transform:translateY(-8px);
-}
-
-.project-card img{
-  width:100%;
-  height:300px;
-  object-fit:cover;
-  display:block;
-}
-
-.project-info{
-  padding:30px;
-}
-
-.project-info h3{
-  font-size:30px;
-  margin-bottom:10px;
-  color:#222;
-}
-
-.project-info span{
-  display:block;
-  font-size:16px;
-  font-weight:700;
-  color:#888;
-  margin-bottom:22px;
-}
-
-.project-info p{
-  font-size:18px;
-  line-height:1.7;
-  color:#555;
-  margin-bottom:16px;
-}
-
-.project-buttons{
-  display:flex;
-  gap:16px;
-  margin-top:26px;
-}
-
-.project-buttons a{
-  padding:12px 22px;
-  border-radius:40px;
-  background:#111;
-  color:#fff;
-  text-decoration:none;
-  font-size:16px;
-  transition:.3s;
-}
-
-.project-buttons a:hover{
-  opacity:.75;
-}
-
-.projects-footer{
-  background:#111;
-  color:#fff;
-  padding:45px 0;
-}
-
-.footer-container{
-  width:88%;
-  max-width:1200px;
-  margin:0 auto;
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.footer-container nav{
-  display:flex;
-  gap:28px;
-}
-
-.footer-container a{
-  color:#fff;
-  text-decoration:none;
-}
-
-@media(max-width:900px){
-  .header-container{
-    justify-content:center;
-    gap:30px;
+  .project-card img {
+    height: 220px;
   }
 
-  .header-container nav{
-    display:none;
+  .project-info {
+    padding: 22px;
   }
 
-  .portfolio-text h1{
-    font-size:54px;
+  .project-info h2,
+  .project-info h3 {
+    font-size: 24px;
   }
 
-  .portfolio-text p{
-    font-size:18px;
-    width:88%;
+  .project-info p {
+    font-size: 16px;
   }
 
-  .projects-grid{
-    grid-template-columns:1fr;
-  }
-
-  .project-card img{
-    height:220px;
-  }
-
-  .footer-container{
-    flex-direction:column;
-    gap:24px;
+  .project-buttons {
+    gap: 10px;
   }
 }

@@ -29,9 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const textos = {
 
-    /* =========================
-    PORTUGUÊS
-    ========================= */
+  
 
     pt: {
 
@@ -185,9 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Foi desenvolvida usando HTML, CSS e estrutura responsiva para adaptar o conteúdo em diferentes tamanhos de tela.'
     },
 
-    /* =========================
-    INGLÊS
-    ========================= */
+    
 
     en: {
 
@@ -409,10 +405,10 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', revealOnScroll)
 
   revealOnScroll()
-<<<<<<< HEAD
+
 })
-=======
-})
+
+
 
 const track = document.querySelector('.projects-track')
 
@@ -435,4 +431,4 @@ if (track) {
 
   animateProjects()
 }
->>>>>>> 01eeb0b (update portfolio)
+
