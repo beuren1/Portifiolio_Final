@@ -277,7 +277,7 @@ nav a.active {
 
   width: max-content;
 
-  animation: landingScroll 35s linear infinite;
+
 }
 
 .landing-slider:hover .landing-track {
@@ -326,21 +326,17 @@ nav a.active {
 .landing-slider::before {
   left: 0;
 
-  background: linear-gradient(
-    to right,
-    #f7f7f7,
-    transparent
-  );
+  background: linear-gradient(to right,
+      #f7f7f7,
+      transparent);
 }
 
 .landing-slider::after {
   right: 0;
 
-  background: linear-gradient(
-    to left,
-    #f7f7f7,
-    transparent
-  );
+  background: linear-gradient(to left,
+      #f7f7f7,
+      transparent);
 }
 
 
@@ -491,4 +487,32 @@ nav a.active {
   .project-buttons {
     gap: 10px;
   }
+}
+
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 18px;
+}
+
+.project-tags .tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 11px;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  background: #1e293b;
+  color: #e2e8f0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.project-tags .tag-type {
+  background: #164e63;
+  border-color: #0891b2;
+  color: #a5f3fc;
 }
