@@ -516,3 +516,42 @@ nav a.active {
   border-color: #0891b2;
   color: #a5f3fc;
 }
+
+
+/* ==========================================
+   ALINHAR BOTÕES DOS PROJETOS
+========================================== */
+
+/* Os cartões ocupam toda a altura disponível */
+.projects-grid {
+  align-items: stretch;
+}
+
+/* Cada cartão organiza seu conteúdo verticalmente */
+.projects-grid .project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* A área de informações ocupa o espaço do cartão */
+.projects-grid .project-card .project-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Empurra os botões para o final */
+.projects-grid .project-card .project-buttons {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+/* Mantém os botões organizados */
+.projects-grid .project-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+}
