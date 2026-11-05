@@ -6,34 +6,44 @@
 
   <title>Sobre | Josué Beuren</title>
 
+  <meta name="description" content="Conheça Josué Beuren, desenvolvedor front-end e estudante Full Stack Python, suas habilidades e trajetória.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Josué Beuren | Sobre">
+  <meta property="og:description" content="Conheça Josué Beuren, desenvolvedor front-end e estudante Full Stack Python, suas habilidades e trajetória.">
+
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 
 </head>
 
-<body>
+<body class="page-about">
+  <a class="skip-link" href="#main-content" data-i18n="skipContent">Pular para o conteúdo</a>
 
 <header id="header">
   <div class="header-inner">
 
     <a href="index.html" class="logo">JB</a>
 
-    <nav class="main-nav">
-      <a href="about.html" data-i18n="navAbout">Sobre</a>
-      <a href="index.html#projetos" data-i18n="navProjects">projetos</a>
+    <nav id="main-navigation" class="main-nav" aria-label="Principal" data-i18n-aria-label="mainNavigation">
+      <a href="about.html" class="active" aria-current="page" data-i18n="navAbout">Sobre</a>
+      <a href="projects.html" data-i18n="navProjects">projetos</a>
       <a href="contact.html" data-i18n="navContact">contato</a>
     </nav>
 
-    <div class="header-actions">
-      <button class="lang-btn">PT / EN</button>
+    <button type="button" class="menu-toggle" aria-controls="main-navigation" aria-expanded="false" data-i18n="menu">Menu</button>
 
-      <a href="#" class="social-link">in</a>
-      <a href="#" class="social-link">f</a>
-      <a href="#" class="social-link">w</a>
+    <div class="header-actions">
+      <button type="button" class="lang-btn" aria-label="Switch to English">PT / EN</button>
+
+      <a href="https://www.linkedin.com/in/josue-beuren/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
+      <a href="https://www.instagram.com/emaxter123456/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">◎</a>
+      <a href="mailto:josuebeurensilvaa@gmail.com" class="social-link" aria-label="Email">@</a>
     </div>
 
   </div>
 </header>
+
+<main id="main-content" tabindex="-1">
 
 <!-- SOBRE -->
 
@@ -43,7 +53,7 @@
 
     <div class="about-text slide-from-left">
 
-      <h2 data-i18n="aboutTitle">Quem sou eu?</h2>
+      <h1 data-i18n="aboutTitle">Quem sou eu?</h1>
 
       <p class="about-lead" data-i18n="aboutLead">
         Sou desenvolvedor front-end e estudante de programação focado em criar interfaces modernas e experiências visuais bonitas.
@@ -61,7 +71,7 @@
 
     <div class="about-image slide-from-right">
 
-      <img class="about-video" src="assets/foto2.png" alt="Sobre mim">
+      <img class="about-video" src="assets/foto2.png" alt="Retrato de Josué Beuren" data-i18n-alt="portraitAlt" width="1254" height="1254" decoding="async">
 
     </div>
 
@@ -75,10 +85,10 @@
 
   <div class="gallery-container">
 
-    <img src="assets/foto5.jpg">
-    <img src="assets/foto1.png">
-    <img src="assets/foto2.png">
-    <img src="assets/foto3.png">
+    <img src="assets/foto5.jpg" alt="" width="1200" height="1600" decoding="async" loading="lazy">
+    <img src="assets/foto1.png" alt="" width="1024" height="1536" decoding="async" loading="lazy">
+    <img src="assets/foto2.png" alt="" width="1254" height="1254" decoding="async" loading="lazy">
+    <img src="assets/foto3.png" alt="" width="1024" height="1536" decoding="async" loading="lazy">
     
 
   </div>
@@ -93,7 +103,7 @@
 
     <div class="facts-image slide-from-left">
 
-      <img src="assets/curiosidade.png">
+      <img src="assets/curiosidade.png" alt="" width="1402" height="1122" decoding="async" loading="lazy">
 
     </div>
 
@@ -189,7 +199,7 @@
     </div>
 
     <div class="parts-image reveal">
-      <img src="assets/foto6.png" alt="Skills">
+      <img src="assets/foto6.png" alt="" width="400" height="350" decoding="async" loading="lazy">
     </div>
 
     <div class="part-right slide-from-right">
@@ -215,6 +225,8 @@
 
 <!-- FOOTER -->
 
+</main>
+
 <footer id="footer">
 
   <div class="footer-inner">
@@ -223,39 +235,13 @@
 
     <div class="footer-nav">
       <a href="about.html" data-i18n="navAbout">sobre</a>
-      <a href="index.html#projetos" data-i18n="navProjects">projetos</a>
-      <a href="#" data-i18n="navBlog">blog</a>
+      <a href="projects.html" data-i18n="navProjects">projetos</a>
       <a href="contact.html" data-i18n="navContact">contato</a>
     </div>
 
   </div>
 
 </footer>
-
-<script>
-
-const reveals = document.querySelectorAll('.reveal')
-
-function revealOnScroll() {
-
-  reveals.forEach((section) => {
-
-    const windowHeight = window.innerHeight
-    const revealTop = section.getBoundingClientRect().top
-
-    if(revealTop < windowHeight - 100){
-      section.classList.add('active')
-    }
-
-  })
-
-}
-
-window.addEventListener('scroll', revealOnScroll)
-
-revealOnScroll()
-
-</script>
 
 </body>
 </html>

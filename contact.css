@@ -1,70 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f4f4f4;
-  color: #222;
-  overflow-x: hidden;
-}
-
-/* HEADER */
-
-.contact-header {
-  width: 100%;
-  height: 110px;
-  background: #111;
-}
-
-.header-container {
-  width: 88%;
-  max-width: 1400px;
-  height: 100%;
-  margin: 0 auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  width: 74px;
-  height: 74px;
-  border-radius: 50%;
-  background: #fff;
-  color: #111;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: Georgia, serif;
-  font-size: 36px;
-  font-weight: 900;
-  font-style: italic;
-  text-decoration: none;
-}
-
-nav {
-  display: flex;
-  gap: 40px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-  transition: .3s;
-}
-
-nav a:hover,
-nav a.active {
-  opacity: .55;
-}
-
 /* HERO CONTATO */
 
 .contact-hero {
@@ -77,8 +10,15 @@ nav a.active {
   align-items: center;
 }
 
+.contact-hero > *, .form-grid > * { min-width: 0; }
+.form-help, #form-status { color: #555; line-height: 1.6; }
+.email-address { display: inline-block; padding: 8px 0; color: #222; overflow-wrap: anywhere; }
+.contact-form-section button[type="submit"] { display: block; min-height: 44px; }
+.social-card { min-height: 44px; }
+.social-card span { flex-shrink: 0; }
+
 .contact-left h1 {
-  font-size: 120px;
+  font-size: clamp(3rem, 7.5vw, 7.5rem);
   line-height: 1;
   margin-bottom: 24px;
   color: #303030;
@@ -103,7 +43,7 @@ nav a.active {
 
 .social-grid {
   display: grid;
-  grid-template-columns: repeat(2, 220px);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   gap: 26px;
   margin-top: 50px;
 }
@@ -136,17 +76,13 @@ nav a.active {
   transform: translateY(-6px);
 }
 
-.twitter span { background: #1da1f2; }
 .linkedin span { background: #0077b5; }
 .instagram span { background: #ff0080; }
-.discord span { background: #5865F2; }
-.whatsapp span { background: #25D366; }
+.github span { background: #24292f; }
 
-.twitter p { color: #1da1f2; }
 .linkedin p { color: #0077b5; }
-.instagram p { color: #ff0080; }
-.discord p { color: #5865F2; }
-.whatsapp p { color: #25D366; }
+.instagram p { color: #bd005f; }
+.github p { color: #24292f; }
 
 /* FORM */
 
@@ -179,14 +115,14 @@ nav a.active {
   flex-direction: column;
 }
 
-label {
+.contact-form-section label {
   font-size: 18px;
   color: #555;
   margin-bottom: 10px;
 }
 
-input,
-textarea {
+.contact-form-section input,
+.contact-form-section textarea {
   width: 100%;
   border: 1px solid #ccc;
   background: #f9f9f9;
@@ -196,12 +132,12 @@ textarea {
   border-radius: 8px;
 }
 
-textarea {
+.contact-form-section textarea {
   min-height: 194px;
   resize: vertical;
 }
 
-button[type="submit"] {
+.contact-form-section button[type="submit"] {
   margin-top: 20px;
   background: #111;
   color: #fff;
@@ -213,40 +149,14 @@ button[type="submit"] {
   transition: .3s;
 }
 
-button[type="submit"]:hover {
+.contact-form-section button[type="submit"]:hover {
   transform: translateY(-3px);
   opacity: .85;
-}
-
-/* FOOTER */
-
-.contact-footer {
-  border-top: 1px solid #ddd;
-  background: #f4f4f4;
-  padding: 45px 0;
-}
-
-.footer-container {
-  width: 88%;
-  max-width: 1400px;
-  margin: 0 auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.footer-container p {
-  color: #666;
-  font-size: 18px;
 }
 
 /* RESPONSIVO */
 
 @media(max-width:1000px) {
-  nav {
-    display: none;
-  }
 
   .contact-hero {
     grid-template-columns: 1fr;
@@ -254,7 +164,7 @@ button[type="submit"]:hover {
   }
 
   .contact-left h1 {
-    font-size: 72px;
+    font-size: clamp(3rem, 10vw, 4.5rem);
   }
 
   .contact-left > p {
@@ -269,8 +179,12 @@ button[type="submit"]:hover {
     grid-template-columns: 1fr;
   }
 
-  .footer-container {
-    flex-direction: column;
-    gap: 24px;
-  }
+}
+
+@media (max-width: 500px) {
+  .contact-hero { gap: 36px; }
+  .contact-left > p { font-size: 20px; }
+  .form-container h2 { font-size: clamp(2rem, 9vw, 2.75rem); }
+  .contact-form-section { padding: 60px 0; }
+  .form-grid { gap: 0; }
 }

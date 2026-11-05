@@ -6,13 +6,19 @@
 
   <title>JB | Contato</title>
 
+  <meta name="description" content="Entre em contato com Josué Beuren para conversar sobre projetos e oportunidades de desenvolvimento web.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Josué Beuren | Contato">
+  <meta property="og:description" content="Entre em contato com Josué Beuren para conversar sobre projetos e oportunidades de desenvolvimento web.">
+
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="contact.css">
 
   <script src="script.js" defer></script>
 </head>
 
-<body>
+<body class="page-contact">
+  <a class="skip-link" href="#main-content" data-i18n="skipContent">Pular para o conteúdo</a>
 
 <header id="header">
 
@@ -20,23 +26,27 @@
 
     <a href="index.html" class="logo">JB</a>
 
-    <nav class="main-nav">
+    <nav id="main-navigation" class="main-nav" aria-label="Principal" data-i18n-aria-label="mainNavigation">
       <a href="about.html" data-i18n="navAbout">sobre</a>
       <a href="projects.html" data-i18n="navProjects">projetos</a>
-      <a href="contact.html" class="active" data-i18n="navContact">contato</a>
+      <a href="contact.html" class="active" aria-current="page" data-i18n="navContact">contato</a>
     </nav>
 
-    <div class="header-actions">
-      <button class="lang-btn">PT / EN</button>
+    <button type="button" class="menu-toggle" aria-controls="main-navigation" aria-expanded="false" data-i18n="menu">Menu</button>
 
-      <a href="#" class="social-link">in</a>
-      <a href="#" class="social-link">f</a>
-      <a href="#" class="social-link">w</a>
+    <div class="header-actions">
+      <button type="button" class="lang-btn" aria-label="Switch to English">PT / EN</button>
+
+      <a href="https://www.linkedin.com/in/josue-beuren/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer">in</a>
+      <a href="https://www.instagram.com/emaxter123456/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer">◎</a>
+      <a href="mailto:josuebeurensilvaa@gmail.com" class="social-link" aria-label="Email">@</a>
     </div>
 
   </div>
 
 </header>
+
+<main id="main-content" tabindex="-1">
 
 <section class="contact-hero">
 
@@ -51,19 +61,19 @@
 
     <div class="social-grid">
 
-      <a href="https://www.linkedin.com/in/josue-beuren/" target="_blank" class="social-card linkedin">
+      <a href="https://www.linkedin.com/in/josue-beuren/" target="_blank" rel="noopener noreferrer" class="social-card linkedin">
         <span>in</span>
         <p>LinkedIn</p>
       </a>
 
-      <a href="https://www.instagram.com/emaxter123456/" target="_blank" class="social-card instagram">
+      <a href="https://www.instagram.com/emaxter123456/" target="_blank" rel="noopener noreferrer" class="social-card instagram">
         <span>◎</span>
         <p>Instagram</p>
       </a>
 
-      <a href="https://discord.com/" target="_blank" class="social-card discord">
-        <span>🎮</span>
-        <p>Discord</p>
+      <a href="https://github.com/beuren1" target="_blank" rel="noopener noreferrer" class="social-card github">
+        <span aria-hidden="true">GH</span>
+        <p>GitHub</p>
       </a>
 
     </div>
@@ -72,7 +82,7 @@
 
   <div class="contact-right">
 
-    <img src="assets/foto2.png" alt="Foto contato">
+    <img src="assets/optimized/foto2-520.jpg" alt="Retrato de Josué Beuren" data-i18n-alt="portraitAlt" width="1254" height="1254" decoding="async" srcset="assets/optimized/foto2-520.jpg 520w, assets/optimized/foto2-1040.jpg 1040w" sizes="(max-width: 600px) 88vw, 520px">
 
   </div>
 
@@ -84,37 +94,42 @@
 
     <h2 data-i18n="emailTitle">Me envie um email</h2>
 
-    <form>
+    <form id="contact-form" action="mailto:josuebeurensilvaa@gmail.com" method="post" enctype="text/plain" aria-describedby="form-help">
 
       <div class="form-grid">
 
         <div class="input-group">
 
-          <label data-i18n="nameLabel">Nome</label>
-          <input type="text" data-i18n-placeholder="namePlaceholder" placeholder="Seu nome">
+          <label for="contact-name" data-i18n="nameLabel">Nome</label>
+          <input id="contact-name" name="name" autocomplete="name" required maxlength="120" type="text" data-i18n-placeholder="namePlaceholder" placeholder="Seu nome">
 
-          <label data-i18n="emailLabel">Email</label>
-          <input type="email" data-i18n-placeholder="emailPlaceholder" placeholder="Seu email">
+          <label for="contact-email" data-i18n="emailLabel">Email</label>
+          <input id="contact-email" name="email" autocomplete="email" required maxlength="254" type="email" data-i18n-placeholder="emailPlaceholder" placeholder="Seu email">
 
         </div>
 
         <div class="input-group">
 
-          <label data-i18n="messageLabel">Mensagem</label>
+          <label for="contact-message" data-i18n="messageLabel">Mensagem</label>
 
-          <textarea data-i18n-placeholder="messagePlaceholder" placeholder="Digite sua mensagem"></textarea>
+          <textarea id="contact-message" name="message" required maxlength="5000" rows="6" data-i18n-placeholder="messagePlaceholder" placeholder="Digite sua mensagem"></textarea>
 
         </div>
 
       </div>
 
-      <button type="submit" data-i18n="sendButton">Enviar email</button>
+      <p id="form-help" class="form-help" data-i18n="formHelp">Abre um rascunho no seu aplicativo de email. Revise e envie por lá, ou escreva para</p>
+      <a class="email-address" href="mailto:josuebeurensilvaa@gmail.com">josuebeurensilvaa@gmail.com</a>
+      <p id="form-status" role="status" aria-live="polite"></p>
+      <button type="submit" data-i18n="sendButton">Abrir aplicativo de email</button>
 
     </form>
 
   </div>
 
 </section>
+
+</main>
 
 <footer id="footer">
 
@@ -125,7 +140,6 @@
     <div class="footer-nav">
       <a href="about.html" data-i18n="navAbout">sobre</a>
       <a href="projects.html" data-i18n="navProjects">projetos</a>
-      <a href="#" data-i18n="navBlog">blog</a>
       <a href="contact.html" data-i18n="navContact">contato</a>
     </div>
 

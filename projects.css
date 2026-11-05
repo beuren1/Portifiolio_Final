@@ -1,78 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f7f7f7;
-  color: #111;
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-.projects-header {
-  width: 100%;
-  height: 100px;
-  background: #111;
-}
-
-.header-container {
-  width: 88%;
-  max-width: 1200px;
-  height: 100%;
-  margin: 0 auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  width: 68px;
-  height: 68px;
-
-  border-radius: 50%;
-
-  background: #fff;
-  color: #111;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: Georgia, serif;
-  font-size: 34px;
-  font-weight: 900;
-  font-style: italic;
-
-  text-decoration: none;
-}
-
-nav {
-  display: flex;
-  gap: 36px;
-}
-
-nav a,
-nav a:visited {
-  color: #fff;
-  text-decoration: none;
-  font-size: 19px;
-
-  transition: 0.3s;
-}
-
-nav a:hover,
-nav a.active {
-  opacity: 0.55;
-}
-
-
 /* =========================
    HERO
 ========================= */
@@ -86,7 +11,7 @@ nav a.active {
 }
 
 .portfolio-text h1 {
-  font-size: 86px;
+  font-size: clamp(3rem, 8vw, 5.375rem);
   font-weight: 900;
 
   color: #2d2d2d;
@@ -104,7 +29,6 @@ nav a.active {
 
   color: #666;
 }
-
 
 /* =========================
    CATEGORIAS
@@ -127,7 +51,6 @@ nav a.active {
 
   color: #222;
 }
-
 
 /* =========================
    CARDS
@@ -166,24 +89,12 @@ nav a.active {
   padding: 30px;
 }
 
-.project-info h2,
 .project-info h3 {
   margin-bottom: 10px;
 
   font-size: 28px;
 
   color: #222;
-}
-
-.project-info span {
-  display: block;
-
-  margin-bottom: 22px;
-
-  font-size: 15px;
-  font-weight: 700;
-
-  color: #888;
 }
 
 .project-info p {
@@ -194,7 +105,6 @@ nav a.active {
 
   color: #555;
 }
-
 
 /* =========================
    BOTÕES
@@ -233,7 +143,6 @@ nav a.active {
   transform: translateY(-2px);
 }
 
-
 /* =========================
    GRID
 ========================= */
@@ -249,165 +158,12 @@ nav a.active {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
   gap: 36px;
-}
-
-
-/* =========================
-   CARROSSEL LANDING PAGES
-========================= */
-
-.landing-slider {
-  width: 100%;
-
-  overflow: hidden;
-
-  position: relative;
-
-  padding: 20px 0;
-}
-
-.landing-track {
-  display: flex;
-
-  flex-wrap: nowrap;
-
   align-items: stretch;
-
-  gap: 24px;
-
-  width: max-content;
-
-
 }
 
-.landing-slider:hover .landing-track {
-  animation-play-state: paused;
-}
-
-.landing-track .project-card {
-  width: 360px;
-  min-width: 360px;
-
-  flex: 0 0 360px;
-}
-
-
-/* Movimento infinito */
-
-@keyframes landingScroll {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(calc(-50% - 12px));
-  }
-}
-
-
-/* Sombras laterais */
-
-.landing-slider::before,
-.landing-slider::after {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-
-  width: 80px;
-  height: 100%;
-
-  z-index: 5;
-
-  pointer-events: none;
-}
-
-.landing-slider::before {
-  left: 0;
-
-  background: linear-gradient(to right,
-      #f7f7f7,
-      transparent);
-}
-
-.landing-slider::after {
-  right: 0;
-
-  background: linear-gradient(to left,
-      #f7f7f7,
-      transparent);
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-#footer {
-  width: 100%;
-
-  background: #111;
-
-  color: #fff;
-
-  padding: 45px 0;
-}
-
-.footer-inner {
-  width: 88%;
-  max-width: 1200px;
-
-  margin: 0 auto;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-}
-
-.footer-inner p {
-  margin: 0;
-
-  color: #fff;
-}
-
-.footer-nav {
-  display: flex;
-
-  gap: 28px;
-}
-
-.footer-nav a,
-.footer-nav a:visited {
-  color: #fff;
-
-  text-decoration: none;
-
-  transition: 0.3s;
-}
-
-.footer-nav a:hover {
-  opacity: 0.65;
-}
-
-
-/* =========================
-   RESPONSIVO
-========================= */
+/* RESPONSIVO */
 
 @media (max-width: 900px) {
-
-  .header-container {
-    justify-content: center;
-
-    gap: 30px;
-  }
-
-  .header-container nav {
-    display: none;
-  }
 
   .portfolio-text h1 {
     font-size: 54px;
@@ -436,7 +192,6 @@ nav a.active {
   }
 }
 
-
 @media (max-width: 768px) {
 
   .project-category {
@@ -449,24 +204,6 @@ nav a.active {
     font-size: 28px;
   }
 
-  .landing-track {
-    gap: 16px;
-
-    animation-duration: 25s;
-  }
-
-  .landing-track .project-card {
-    width: 280px;
-    min-width: 280px;
-
-    flex: 0 0 280px;
-  }
-
-  .landing-slider::before,
-  .landing-slider::after {
-    width: 35px;
-  }
-
   .project-card img {
     height: 220px;
   }
@@ -475,7 +212,6 @@ nav a.active {
     padding: 22px;
   }
 
-  .project-info h2,
   .project-info h3 {
     font-size: 24px;
   }
@@ -488,7 +224,6 @@ nav a.active {
     gap: 10px;
   }
 }
-
 
 .project-tags {
   display: flex;
@@ -508,7 +243,7 @@ nav a.active {
   font-size: 12px;
   font-weight: 600;
   line-height: 1.4;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .project-tags .tag-type {
@@ -517,22 +252,16 @@ nav a.active {
   color: #a5f3fc;
 }
 
-
 /* ==========================================
    ALINHAR BOTÕES DOS PROJETOS
 ========================================== */
 
-/* Os cartões ocupam toda a altura disponível */
-.projects-grid {
-  align-items: stretch;
-}
 
 /* Cada cartão organiza seu conteúdo verticalmente */
 .projects-grid .project-card {
   display: flex;
   flex-direction: column;
   height: 100%;
-  box-sizing: border-box;
 }
 
 /* A área de informações ocupa o espaço do cartão */

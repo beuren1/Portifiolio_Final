@@ -7,46 +7,19 @@
 
   <title>JB | Projetos</title>
 
+  <meta name="description" content="Explore os projetos de Josué Beuren: e-commerce, aplicações full stack, dashboards e landing pages.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Josué Beuren | Projetos">
+  <meta property="og:description" content="Explore os projetos de Josué Beuren: e-commerce, aplicações full stack, dashboards e landing pages.">
+
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="projects.css">
 
   <script src="script.js" defer></script>
-
-  <style>
-    /* TAGS DOS PROJETOS */
-
-    .project-info .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 8px;
-      margin: 14px 0 18px;
-    }
-
-    .project-info .project-tags .tag {
-      display: inline-flex;
-      align-items: center;
-      padding: 6px 10px;
-      border: 1px solid #334155;
-      border-radius: 6px;
-      background: #1e293b;
-      color: #e2e8f0;
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 1.4;
-      white-space: nowrap;
-      width: auto;
-    }
-
-    .project-info .project-tags .tag-type {
-      background: #164e63;
-      border-color: #0891b2;
-      color: #a5f3fc;
-    }
-  </style>
 </head>
 
-<body>
+<body class="page-projects">
+  <a class="skip-link" href="#main-content" data-i18n="skipContent">Pular para o conteúdo</a>
 
   <!-- HEADER -->
 
@@ -55,12 +28,12 @@
 
       <a href="index.html" class="logo">JB</a>
 
-      <nav class="main-nav">
+      <nav id="main-navigation" class="main-nav" aria-label="Principal" data-i18n-aria-label="mainNavigation">
         <a href="about.html" data-i18n="navAbout">
           sobre
         </a>
 
-        <a href="projects.html" class="active" data-i18n="navProjects">
+        <a href="projects.html" class="active" aria-current="page" data-i18n="navProjects">
           projetos
         </a>
 
@@ -69,17 +42,20 @@
         </a>
       </nav>
 
-      <div class="header-actions">
-        <button class="lang-btn">PT / EN</button>
+      <button type="button" class="menu-toggle" aria-controls="main-navigation" aria-expanded="false" data-i18n="menu">Menu</button>
 
-        <a href="#" class="social-link">in</a>
-        <a href="#" class="social-link">f</a>
-        <a href="#" class="social-link">w</a>
+    <div class="header-actions">
+        <button type="button" class="lang-btn" aria-label="Switch to English">PT / EN</button>
+
+        <a href="https://www.linkedin.com/in/josue-beuren/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
+        <a href="https://www.instagram.com/emaxter123456/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">◎</a>
+        <a href="mailto:josuebeurensilvaa@gmail.com" class="social-link" aria-label="Email">@</a>
       </div>
 
     </div>
   </header>
 
+<main id="main-content" tabindex="-1">
 
   <!-- HERO -->
 
@@ -98,28 +74,27 @@
     </div>
   </section>
 
-
   <!-- =====================================
        FULL STACK
   ====================================== -->
 
   <section class="project-category">
 
-    <h1 class="category-title">
+    <h2 class="category-title">
       Full Stack
-    </h1>
+    </h2>
 
     <div class="projects-grid">
 
       <!-- BEUREN STORE -->
 
-      <article class="project-card">
+      <article id="beuren-store" class="project-card">
 
-        <img src="assets/foto10.png" alt="Beuren Store - E-commerce Full Stack">
+        <img src="assets/optimized/foto10-640.jpg" alt="Beuren Store - E-commerce Full Stack" width="1909" height="853" decoding="async" loading="lazy" srcset="assets/optimized/foto10-640.jpg 640w, assets/optimized/foto10-1280.jpg 1280w" sizes="(max-width: 900px) 88vw, 600px">
 
         <div class="project-info">
 
-          <h2>Beuren Store</h2>
+          <h3>Beuren Store</h3>
 
           <div class="project-tags">
             <span class="tag tag-type">Full Stack</span>
@@ -132,29 +107,15 @@
             <span class="tag">REST API</span>
           </div>
 
-          <p>
-            E-commerce Full Stack com catálogo
-            dinâmico de produtos, cadastro e login
-            de usuários, carrinho persistente,
-            checkout e histórico de pedidos.
-          </p>
+          <p data-i18n="projectDescription1">E-commerce Full Stack com catálogo dinâmico de produtos, cadastro e login de usuários, carrinho persistente, checkout e histórico de pedidos.</p>
 
-          <p>
-            Frontend desenvolvido com HTML, SCSS
-            e JavaScript. Backend com Django REST
-            Framework, API REST e PostgreSQL.
-            Aplicação hospedada na Vercel e Render.
-          </p>
+          <p data-i18n="projectDescription2">Frontend desenvolvido com HTML, SCSS e JavaScript. Backend com Django REST Framework, API REST e PostgreSQL. Aplicação hospedada na Vercel e Render.</p>
 
           <div class="project-buttons">
 
-            <a href="https://github.com/beuren1/LandingPageStore" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
+            <a href="https://github.com/beuren1/LandingPageStore" target="_blank" rel="noopener noreferrer" aria-label="GitHub — Beuren Store">GitHub</a>
 
-            <a href="https://landing-page-store-lxu1.vercel.app/" target="_blank" rel="noopener noreferrer">
-              Ver projeto
-            </a>
+            <a href="https://landing-page-store-lxu1.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="viewProject" data-project-name="Beuren Store" aria-label="Ver projeto — Beuren Store">Ver projeto</a>
 
           </div>
 
@@ -162,16 +123,15 @@
 
       </article>
 
-
       <!-- TWITTER CLONE -->
 
-      <article class="project-card">
+      <article id="twitter-clone" class="project-card">
 
-        <img src="assets/twiter.png" alt="Twitter Clone">
+        <img src="assets/optimized/twiter-640.jpg" alt="Twitter Clone" width="1888" height="835" decoding="async" loading="lazy" srcset="assets/optimized/twiter-640.jpg 640w, assets/optimized/twiter-1280.jpg 1280w" sizes="(max-width: 900px) 88vw, 600px">
 
         <div class="project-info">
 
-          <h2>Twitter Clone</h2>
+          <h3>Twitter Clone</h3>
 
           <div class="project-tags">
             <span class="tag tag-type">Full Stack</span>
@@ -183,28 +143,15 @@
             <span class="tag">REST API</span>
           </div>
 
-          <p>
-            Rede social Full Stack com cadastro,
-            autenticação JWT, criação e edição
-            de posts, feed, seguidores, curtidas
-            e comentários.
-          </p>
+          <p data-i18n="projectDescription3">Rede social Full Stack com cadastro, autenticação JWT, criação e edição de posts, feed, seguidores, curtidas e comentários.</p>
 
-          <p>
-            Frontend desenvolvido em React
-            e backend com Django REST Framework,
-            PostgreSQL e API REST.
-          </p>
+          <p data-i18n="projectDescription4">Frontend desenvolvido em React e backend com Django REST Framework, PostgreSQL e API REST.</p>
 
           <div class="project-buttons">
 
-            <a href="https://github.com/beuren1/twiter_clone" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
+            <a href="https://github.com/beuren1/twiter_clone" target="_blank" rel="noopener noreferrer" aria-label="GitHub — Twitter Clone">GitHub</a>
 
-            <a href="https://twiter-clone-smoky.vercel.app/" target="_blank" rel="noopener noreferrer">
-              Ver projeto
-            </a>
+            <a href="https://twiter-clone-smoky.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="viewProject" data-project-name="Twitter Clone" aria-label="Ver projeto — Twitter Clone">Ver projeto</a>
 
           </div>
 
@@ -216,28 +163,27 @@
 
   </section>
 
-
   <!-- =====================================
        E-COMMERCE / REACT
   ====================================== -->
 
   <section class="project-category">
 
-    <h1 class="category-title">
+    <h2 class="category-title" data-i18n="reactCategory">
       E-commerce / React
-    </h1>
+    </h2>
 
     <div class="projects-grid">
 
       <!-- EFOOD -->
 
-      <article class="project-card">
+      <article id="efood" class="project-card">
 
-        <img src="assets/foto9.png" alt="Projeto eFood">
+        <img src="assets/optimized/foto9-640.jpg" alt="Projeto eFood" width="1911" height="849" decoding="async" loading="lazy" srcset="assets/optimized/foto9-640.jpg 640w, assets/optimized/foto9-1280.jpg 1280w" sizes="(max-width: 900px) 88vw, 600px">
 
         <div class="project-info">
 
-          <h2>Projeto eFood</h2>
+          <h3>Projeto eFood</h3>
 
           <div class="project-tags">
             <span class="tag tag-type">React</span>
@@ -248,28 +194,15 @@
             <span class="tag">API REST</span>
           </div>
 
-          <p>
-            Aplicação inspirada em delivery
-            de restaurantes, exibindo cards,
-            categorias e informações vindas
-            de uma API.
-          </p>
+          <p data-i18n="projectDescription5">Aplicação inspirada em delivery de restaurantes, exibindo cards, categorias e informações vindas de uma API.</p>
 
-          <p>
-            Desenvolvida com React,
-            Styled Components, React Router,
-            Redux Toolkit e consumo de API.
-          </p>
+          <p data-i18n="projectDescription6">Desenvolvida com React, Styled Components, React Router, Redux Toolkit e consumo de API.</p>
 
           <div class="project-buttons">
 
-            <a href="https://github.com/beuren1/E-food" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
+            <a href="https://github.com/beuren1/E-food" target="_blank" rel="noopener noreferrer" aria-label="GitHub — Projeto eFood">GitHub</a>
 
-            <a href="https://efood-ebac-nu.vercel.app/" target="_blank" rel="noopener noreferrer">
-              Ver projeto
-            </a>
+            <a href="https://efood-ebac-nu.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="viewProject" data-project-name="Projeto eFood" aria-label="Ver projeto — Projeto eFood">Ver projeto</a>
 
           </div>
 
@@ -277,18 +210,17 @@
 
       </article>
 
-
       <!-- =====================================
            FINTRACK - NOVO PROJETO
       ====================================== -->
 
-      <article class="project-card">
+      <article id="fintrack" class="project-card">
 
-        <img src="assets/download (1).png" alt="FinTrack - Dashboard financeiro em React">
+        <img src="assets/optimized/download--1--640.jpg" alt="FinTrack - Dashboard financeiro em React" width="1895" height="850" decoding="async" loading="lazy" srcset="assets/optimized/download--1--640.jpg 640w, assets/optimized/download--1--1280.jpg 1280w" sizes="(max-width: 900px) 88vw, 600px">
 
         <div class="project-info">
 
-          <h2>FinTrack</h2>
+          <h3>FinTrack</h3>
 
           <div class="project-tags">
             <span class="tag tag-type">React</span>
@@ -296,35 +228,18 @@
             <span class="tag">Vite</span>
             <span class="tag">Recharts</span>
             <span class="tag">LocalStorage</span>
-            <span class="tag">Responsivo</span>
+            <span class="tag" data-i18n="responsivo">Responsivo</span>
           </div>
 
-          <p>
-            Dashboard financeiro para gerenciamento
-            de receitas, despesas e metas pessoais,
-            com gráficos interativos, filtros por
-            categoria, pesquisa e acompanhamento
-            do saldo em tempo real.
-          </p>
+          <p data-i18n="projectDescription7">Dashboard financeiro para gerenciamento de receitas, despesas e metas pessoais, com gráficos interativos, filtros por categoria, pesquisa e acompanhamento do saldo em tempo real.</p>
 
-          <p>
-            Desenvolvido com React, TypeScript,
-            Vite e Recharts. Possui relatórios
-            financeiros, exportação CSV,
-            backup e restauração em JSON,
-            persistência de dados no navegador
-            e interface responsiva.
-          </p>
+          <p data-i18n="projectDescription8">Desenvolvido com React, TypeScript, Vite e Recharts. Possui relatórios financeiros, exportação CSV, backup e restauração em JSON, persistência de dados no navegador e interface responsiva.</p>
 
           <div class="project-buttons">
 
-            <a href="https://github.com/beuren1/FinTrack" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
+            <a href="https://github.com/beuren1/FinTrack" target="_blank" rel="noopener noreferrer" aria-label="GitHub — FinTrack">GitHub</a>
 
-            <a href="https://fin-track-wine-seven.vercel.app/#dashboard" target="_blank" rel="noopener noreferrer">
-              Ver projeto
-            </a>
+            <a href="https://fin-track-wine-seven.vercel.app/#dashboard" target="_blank" rel="noopener noreferrer" data-i18n="viewProject" data-project-name="FinTrack" aria-label="Ver projeto — FinTrack">Ver projeto</a>
 
           </div>
 
@@ -335,8 +250,6 @@
     </div>
 
   </section>
-
-
 
   <!-- =====================================
      LANDING PAGES
@@ -344,50 +257,54 @@
 
   <section class="project-category">
 
-    <h1 class="category-title">
+    <h2 class="category-title">
       Landing Pages
-    </h1>
+    </h2>
 
     <div class="projects-grid">
 
+
+      <article id="checkpoint" class="project-card">
+        <img src="assets/checkpoint.svg" alt="Checkpoint: landing page gamer com controle e detalhes em verde" width="1834" height="839" decoding="async" loading="lazy" sizes="(max-width: 900px) 88vw, 600px">
+        <div class="project-info">
+          <h3>Checkpoint</h3>
+          <div class="project-tags"><span class="tag tag-type">Landing Page</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">LocalStorage</span><span class="tag" data-i18n="responsivo">Responsivo</span></div>
+          <p data-i18n="checkpointDescription">Landing page gamer com catálogo de jogos e acessórios, filtros por categoria e carrinho funcional com quantidades, remoção de itens e cálculo automático do total.</p>
+          <p data-i18n="checkpointDetails">Desenvolvida com HTML, CSS e JavaScript, com carrinho salvo no navegador, FAQ expansível, formulário de contato e resumo de pedido demonstrativo, sem pagamento real.</p>
+          <div class="project-buttons">
+            <a href="https://github.com/beuren1/tarefa9" target="_blank" rel="noopener noreferrer" aria-label="GitHub — Checkpoint">GitHub</a>
+            <a href="https://tarefa9.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="viewProject" data-project-name="Checkpoint" aria-label="Ver projeto — Checkpoint">Ver projeto</a>
+          </div>
+        </div>
+      </article>
+
       <!-- EBAC TECH TALKS -->
 
-      <article class="project-card">
+      <article id="evento" class="project-card">
 
-        <img src="assets/foto8.png" alt="EBAC Tech Talks">
+        <img src="assets/optimized/foto8-640.jpg" alt="EBAC Tech Talks" width="1894" height="821" decoding="async" loading="lazy" srcset="assets/optimized/foto8-640.jpg 640w, assets/optimized/foto8-1280.jpg 1280w" sizes="(max-width: 900px) 88vw, 600px">
 
         <div class="project-info">
 
-          <h2>EBAC Tech Talks</h2>
+          <h3>EBAC Tech Talks</h3>
 
           <div class="project-tags">
             <span class="tag tag-type">Landing Page</span>
             <span class="tag">HTML5</span>
             <span class="tag">SCSS</span>
             <span class="tag">JavaScript</span>
-            <span class="tag">Responsivo</span>
+            <span class="tag" data-i18n="responsivo">Responsivo</span>
           </div>
 
-          <p>
-            Landing page desenvolvida para
-            divulgação de um evento de tecnologia.
-          </p>
+          <p data-i18n="projectDescription9">Landing page desenvolvida para divulgação de um evento de tecnologia.</p>
 
-          <p>
-            Projeto responsivo com informações
-            do evento, localização e chamada
-            principal.
-          </p>
+          <p data-i18n="projectDescription10">Projeto responsivo com informações do evento, localização e chamada principal.</p>
 
           <div class="project-buttons">
 
-            <a href="https://github.com/beuren1/ebac_tech_talks" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
+            <a href="https://github.com/beuren1/ebac_tech_talks" target="_blank" rel="noopener noreferrer" aria-label="GitHub — EBAC Tech Talks">GitHub</a>
 
-            <a href="https://ebac-tech-talks-jade-three.vercel.app/" target="_blank" rel="noopener noreferrer">
-              Ver projeto
-            </a>
+            <a href="https://ebac-tech-talks-jade-three.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="viewProject" data-project-name="EBAC Tech Talks" aria-label="Ver projeto — EBAC Tech Talks">Ver projeto</a>
 
           </div>
 
@@ -395,16 +312,15 @@
 
       </article>
 
-
       <!-- NEXORA -->
 
-      <article class="project-card">
+      <article id="nexora" class="project-card">
 
-        <img src="assets/nexora.png" alt="Nexora Landing Page">
+        <img src="assets/optimized/nexora-640.jpg" alt="Nexora Landing Page" width="1920" height="836" decoding="async" loading="lazy" srcset="assets/optimized/nexora-640.jpg 640w, assets/optimized/nexora-1280.jpg 1280w" sizes="(max-width: 900px) 88vw, 600px">
 
         <div class="project-info">
 
-          <h2>Nexora</h2>
+          <h3>Nexora</h3>
 
           <div class="project-tags">
             <span class="tag tag-type">Landing Page</span>
@@ -412,29 +328,18 @@
             <span class="tag">CSS3</span>
             <span class="tag">JavaScript</span>
             <span class="tag">UI Design</span>
-            <span class="tag">Responsivo</span>
+            <span class="tag" data-i18n="responsivo">Responsivo</span>
           </div>
 
-          <p>
-            Landing page moderna para uma
-            plataforma fictícia de produtividade
-            e inteligência artificial.
-          </p>
+          <p data-i18n="projectDescription11">Landing page moderna para uma plataforma fictícia de produtividade e inteligência artificial.</p>
 
-          <p>
-            Layout responsivo com animações,
-            planos, FAQ e dashboard visual.
-          </p>
+          <p data-i18n="projectDescription12">Layout responsivo com animações, planos, FAQ e dashboard visual.</p>
 
           <div class="project-buttons">
 
-            <a href="https://github.com/beuren1/nexora" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
+            <a href="https://github.com/beuren1/nexora" target="_blank" rel="noopener noreferrer" aria-label="GitHub — Nexora">GitHub</a>
 
-            <a href="https://nexora-ten-dusky.vercel.app/" target="_blank" rel="noopener noreferrer">
-              Ver projeto
-            </a>
+            <a href="https://nexora-ten-dusky.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="viewProject" data-project-name="Nexora" aria-label="Ver projeto — Nexora">Ver projeto</a>
 
           </div>
 
@@ -446,10 +351,26 @@
 
   </section>
 
+  <section class="project-category" aria-labelledby="catalog-title">
+    <h2 id="catalog-title" class="category-title" data-i18n="catalogTitle">Catálogo</h2>
+    <div class="projects-grid">
+      <article id="cosmeticos" class="project-card">
+        <img src="assets/optimized/foto7-640.jpg" alt="Loja de Cosméticos" width="1920" height="855" decoding="async" loading="lazy" srcset="assets/optimized/foto7-640.jpg 640w, assets/optimized/foto7-1280.jpg 1280w" sizes="(max-width: 900px) 88vw, 600px">
+        <div class="project-info">
+          <h3 data-i18n="projPage1Title">Loja de Cosméticos</h3>
+          <div class="project-tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
+          <p data-i18n="projPage1Text1">Site de catálogo para venda de cosméticos, com seções de produtos, categorias, contato e layout responsivo.</p>
+          <p data-i18n="projPage1Text2">Foi desenvolvido com HTML semântico, CSS personalizado e JavaScript para interações básicas da página.</p>
+        </div>
+      </article>
+    </div>
+  </section>
 
   <!-- FOOTER -->
 
-  <footer id="footer">
+  </main>
+
+<footer id="footer">
 
     <div class="footer-inner">
 
@@ -463,10 +384,6 @@
 
         <a href="projects.html" data-i18n="navProjects">
           projetos
-        </a>
-
-        <a href="#" data-i18n="navBlog">
-          blog
         </a>
 
         <a href="contact.html" data-i18n="navContact">

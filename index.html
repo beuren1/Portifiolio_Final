@@ -8,10 +8,16 @@
 
   <title>JB | Designer & Full-Stack Developer</title>
 
+  <meta name="description" content="Portfólio de Josué Beuren: desenvolvimento front-end e full stack, interfaces responsivas e projetos com React e Python.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Josué Beuren | Portfólio">
+  <meta property="og:description" content="Portfólio de Josué Beuren: desenvolvimento front-end e full stack, interfaces responsivas e projetos com React e Python.">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="page-index">
+  <a class="skip-link" href="#main-content" data-i18n="skipContent">Pular para o conteúdo</a>
 
   <header id="header">
 
@@ -21,7 +27,7 @@
         JB
       </a>
 
-      <nav class="main-nav">
+      <nav id="main-navigation" class="main-nav" aria-label="Principal" data-i18n-aria-label="mainNavigation">
 
         <a href="about.html" data-i18n="navAbout">
           sobre
@@ -37,15 +43,17 @@
 
       </nav>
 
-      <div class="header-actions">
+      <button type="button" class="menu-toggle" aria-controls="main-navigation" aria-expanded="false" data-i18n="menu">Menu</button>
 
-        <button class="lang-btn">
+    <div class="header-actions">
+
+        <button type="button" class="lang-btn" aria-label="Switch to English">
           PT / EN
         </button>
 
-        <a href="#" class="social-link">in</a>
-        <a href="#" class="social-link">f</a>
-        <a href="#" class="social-link">w</a>
+        <a href="https://www.linkedin.com/in/josue-beuren/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
+        <a href="https://www.instagram.com/emaxter123456/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">◎</a>
+        <a href="mailto:josuebeurensilvaa@gmail.com" class="social-link" aria-label="Email">@</a>
 
       </div>
 
@@ -53,8 +61,8 @@
 
   </header>
 
-
-  <main id="home">
+  <main id="main-content" tabindex="-1">
+    <h1 class="visually-hidden" data-i18n="homeTitle">Josué Beuren — desenvolvedor web e designer</h1>
 
     <!-- HERO -->
 
@@ -66,9 +74,9 @@
 
           <div class="description">
 
-            <h1 data-i18n="designerTitle">
+            <h2 data-i18n="designerTitle">
               designer
-            </h1>
+            </h2>
 
             <p data-i18n="designerText">
               Designer focado em interfaces bonitas,
@@ -79,14 +87,13 @@
 
         </a>
 
-
         <a href="about.html" id="coder" class="coder panel">
 
           <div class="description">
 
-            <h1>
+            <h2>
               &lt;<span data-i18n="coderTitle">coder</span>&gt;
-            </h1>
+            </h2>
 
             <p data-i18n="coderText">
               Desenvolvedor front-end que cria sites
@@ -97,19 +104,17 @@
 
         </a>
 
-
         <div class="portrait-wrap">
 
-          <img class="portrait portrait-effect" src="assets/foto3.png" alt="Designer">
+          <img class="portrait portrait-effect" src="assets/optimized/foto3-560.png" alt="Designer" width="1024" height="1536" decoding="async" fetchpriority="high" srcset="assets/optimized/foto3-320.png 320w, assets/optimized/foto3-560.png 560w, assets/foto3.png 1024w" sizes="(max-width: 900px) 300px, 560px">
 
-          <img class="portrait portrait-code" src="assets/foto4.png-removebg-preview.png" alt="Coder">
+          <img class="portrait portrait-code" src="assets/foto4.png-removebg-preview.png" alt="Coder" width="500" height="500" decoding="async">
 
         </div>
 
       </div>
 
     </section>
-
 
     <!-- ÚLTIMOS TRABALHOS -->
 
@@ -121,17 +126,24 @@
           Últimos trabalhos
         </h2>
 
-        <div class="home-projects-slider">
+        <div class="home-projects-slider" role="region" aria-label="Últimos trabalhos" data-i18n-aria-label="workTitle" tabindex="0">
 
           <div class="home-projects-track">
+            <article class="work-card">
+              <a href="projects.html#checkpoint"><img src="assets/checkpoint.svg" alt="Checkpoint: landing page gamer com controle e detalhes em verde" width="1834" height="839" decoding="async" loading="lazy" sizes="(max-width: 900px) 88vw, 600px"></a>
+              <div class="work-info">
+                <h3>Checkpoint</h3>
+                <p data-i18n="checkpointSummary">Landing page gamer com jogos, acessórios e carrinho persistente.</p>
+              </div>
+            </article>
 
             <!-- COSMÉTICOS -->
 
             <article class="work-card">
 
-              <a href="projects.html">
+              <a href="projects.html#cosmeticos">
 
-                <img src="assets/foto7.png" alt="Loja de Cosméticos">
+                <img src="assets/optimized/foto7-640.jpg" alt="Loja de Cosméticos" width="1920" height="855" decoding="async" loading="lazy" srcset="assets/optimized/foto7-640.jpg 640w, assets/optimized/foto7-1280.jpg 1280w" sizes="(max-width: 500px) 260px, (max-width: 900px) 280px, 320px">
 
               </a>
 
@@ -150,14 +162,13 @@
 
             </article>
 
-
             <!-- EFOOD -->
 
             <article class="work-card">
 
-              <a href="projects.html">
+              <a href="projects.html#efood">
 
-                <img src="assets/foto9.png" alt="Projeto eFood">
+                <img src="assets/optimized/foto9-640.jpg" alt="Projeto eFood" width="1911" height="849" decoding="async" loading="lazy" srcset="assets/optimized/foto9-640.jpg 640w, assets/optimized/foto9-1280.jpg 1280w" sizes="(max-width: 500px) 260px, (max-width: 900px) 280px, 320px">
 
               </a>
 
@@ -176,40 +187,37 @@
 
             </article>
 
-
             <!-- ROUPAS -->
 
             <article class="work-card">
 
-              <a href="projects.html">
+              <a href="projects.html#beuren-store">
 
-                <img src="assets/foto10.png" alt="Loja de roupas">
+                <img src="assets/optimized/foto10-640.jpg" alt="Beuren Store" width="1909" height="853" decoding="async" loading="lazy" srcset="assets/optimized/foto10-640.jpg 640w, assets/optimized/foto10-1280.jpg 1280w" sizes="(max-width: 500px) 260px, (max-width: 900px) 280px, 320px">
 
               </a>
 
               <div class="work-info">
 
                 <h3 data-i18n="project3Title">
-                  Loja de roupas
+                  Beuren Store
                 </h3>
 
                 <p data-i18n="project3Text">
-                  Página de produtos com visual moderno
-                  para loja virtual.
+                  E-commerce full stack com catálogo, carrinho e autenticação.
                 </p>
 
               </div>
 
             </article>
 
-
             <!-- EVENTO -->
 
             <article class="work-card">
 
-              <a href="projects.html">
+              <a href="projects.html#evento">
 
-                <img src="assets/foto8.png" alt="Landing Page Evento">
+                <img src="assets/optimized/foto8-640.jpg" alt="Landing Page Evento" width="1894" height="821" decoding="async" loading="lazy" srcset="assets/optimized/foto8-640.jpg 640w, assets/optimized/foto8-1280.jpg 1280w" sizes="(max-width: 500px) 260px, (max-width: 900px) 280px, 320px">
 
               </a>
 
@@ -228,14 +236,13 @@
 
             </article>
 
-
             <!-- TWITTER CLONE -->
 
             <article class="work-card">
 
-              <a href="projects.html">
+              <a href="projects.html#twitter-clone">
 
-                <img src="assets/twiter.png" alt="Twitter Clone">
+                <img src="assets/optimized/twiter-640.jpg" alt="Twitter Clone" width="1888" height="835" decoding="async" loading="lazy" srcset="assets/optimized/twiter-640.jpg 640w, assets/optimized/twiter-1280.jpg 1280w" sizes="(max-width: 500px) 260px, (max-width: 900px) 280px, 320px">
 
               </a>
 
@@ -245,7 +252,7 @@
                   Twitter Clone
                 </h3>
 
-                <p>
+                <p data-i18n="twitterSummary">
                   Rede social full stack desenvolvida
                   com React, Django e PostgreSQL.
                 </p>
@@ -264,7 +271,6 @@
 
   </main>
 
-
   <footer id="footer">
 
     <div class="footer-inner">
@@ -275,19 +281,15 @@
 
       <nav class="footer-nav">
 
-        <a href="about.html">
+        <a href="about.html" data-i18n="navAbout">
           sobre
         </a>
 
-        <a href="projects.html">
+        <a href="projects.html" data-i18n="navProjects">
           projetos
         </a>
 
-        <a href="#blog">
-          blog
-        </a>
-
-        <a href="contact.html">
+        <a href="contact.html" data-i18n="navContact">
           contato
         </a>
 
@@ -297,8 +299,7 @@
 
   </footer>
 
-
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 
 </body>
 
