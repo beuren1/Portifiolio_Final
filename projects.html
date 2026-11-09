@@ -74,17 +74,62 @@
     </div>
   </section>
 
+  <nav class="project-category-nav" aria-label="Categorias de projetos">
+    <a href="#full-stack" data-i18n="fullStackCategory">Full Stack</a>
+    <a href="#ecommerce-react" data-i18n="reactCategory">E-commerce / React</a>
+    <a href="#landing-pages" data-i18n="landingPagesCategory">Landing Pages</a>
+    <a href="#catalogo" data-i18n="catalogTitle">Catálogo</a>
+  </nav>
+
   <!-- =====================================
        FULL STACK
   ====================================== -->
 
-  <section class="project-category">
+  <section id="full-stack" class="project-category">
 
-    <h2 class="category-title">
+    <h2 class="category-title" data-i18n="fullStackCategory">
       Full Stack
     </h2>
 
     <div class="projects-grid">
+
+      <!-- CINEVERSE -->
+
+      <article id="cineverse" class="project-card">
+
+        <img src="assets/optimized/cineverse-640.jpg" alt="CineVerse - plataforma para descobrir filmes e séries" width="640" height="292" decoding="async" loading="lazy" srcset="assets/optimized/cineverse-640.jpg 640w, assets/optimized/cineverse-1280.jpg 1280w" sizes="(max-width: 900px) 88vw, 600px">
+
+        <div class="project-info">
+
+          <h3>CineVerse</h3>
+
+          <div class="project-tags">
+            <span class="tag tag-type">Full Stack</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">TMDB API</span>
+            <span class="tag">TanStack Query</span>
+            <span class="tag">Zustand</span>
+            <span class="tag">Motion</span>
+          </div>
+
+          <p data-i18n="cineverseDescription1">Plataforma responsiva para descobrir filmes e séries, com busca, catálogos, filtros e páginas de detalhes com elenco, notas, trailers e recomendações.</p>
+
+          <p data-i18n="cineverseDescription2">Desenvolvida com Next.js App Router, React, TypeScript, Tailwind CSS, TanStack Query, Zustand e Motion. Integra a API do TMDB por uma rota server-side, mantendo a chave protegida no servidor.</p>
+
+          <div class="project-buttons">
+
+            <a href="https://github.com/beuren1/Cine" target="_blank" rel="noopener noreferrer" aria-label="GitHub — CineVerse">GitHub</a>
+
+            <a href="https://cineverse-kappa-seven.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="viewProject" data-project-name="CineVerse" aria-label="Ver projeto — CineVerse">Ver projeto</a>
+
+          </div>
+
+        </div>
+
+      </article>
 
       <!-- BEUREN STORE -->
 
@@ -167,7 +212,7 @@
        E-COMMERCE / REACT
   ====================================== -->
 
-  <section class="project-category">
+  <section id="ecommerce-react" class="project-category">
 
     <h2 class="category-title" data-i18n="reactCategory">
       E-commerce / React
@@ -255,9 +300,9 @@
      LANDING PAGES
 ====================================== -->
 
-  <section class="project-category">
+  <section id="landing-pages" class="project-category">
 
-    <h2 class="category-title">
+    <h2 class="category-title" data-i18n="landingPagesCategory">
       Landing Pages
     </h2>
 
@@ -274,6 +319,27 @@
           <div class="project-buttons">
             <a href="https://github.com/beuren1/tarefa9" target="_blank" rel="noopener noreferrer" aria-label="GitHub — Checkpoint">GitHub</a>
             <a href="https://tarefa9.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="viewProject" data-project-name="Checkpoint" aria-label="Ver projeto — Checkpoint">Ver projeto</a>
+          </div>
+        </div>
+      </article>
+
+      <article id="neural" class="project-card">
+        <img src="assets/optimized/neural-1280.jpg" alt="Landing page do NeuralAI, plataforma de inteligência artificial" width="1280" height="573" decoding="async" loading="lazy" srcset="assets/optimized/neural-640.jpg 640w, assets/optimized/neural-1280.jpg 1280w" sizes="(max-width: 900px) 88vw, 600px">
+        <div class="project-info">
+          <h3>Neural</h3>
+          <div class="project-tags">
+            <span class="tag tag-type">Landing Page</span>
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Vite</span>
+            <span class="tag">Framer Motion</span>
+            <span class="tag" data-i18n="responsivo">Responsivo</span>
+          </div>
+          <p data-i18n="neuralDescription">Landing page de uma plataforma de inteligência artificial para ajudar na criação de ideias, textos e organização de tarefas.</p>
+          <p data-i18n="neuralDetails">Apresenta recursos, planos e exemplos de conversas com uma assistente de IA.</p>
+          <div class="project-buttons">
+            <a href="https://github.com/beuren1/Neural" target="_blank" rel="noopener noreferrer" aria-label="GitHub — Neural">GitHub</a>
+            <a href="https://neural-js8m-sage.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="viewProject" data-project-name="Neural" aria-label="Ver projeto — Neural">Ver projeto</a>
           </div>
         </div>
       </article>
@@ -351,7 +417,7 @@
 
   </section>
 
-  <section class="project-category" aria-labelledby="catalog-title">
+  <section id="catalogo" class="project-category" aria-labelledby="catalog-title">
     <h2 id="catalog-title" class="category-title" data-i18n="catalogTitle">Catálogo</h2>
     <div class="projects-grid">
       <article id="cosmeticos" class="project-card">

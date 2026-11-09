@@ -152,8 +152,11 @@ for (const page of Object.keys(fixtures)) {
   const { document, frames } = setup('index.html')
   const slider = document.querySelector('.home-projects-slider')
   const track = document.querySelector('.home-projects-track')
-  assert.equal(track.children.length, 10)
-  for (const clone of track.children.slice(5)) {
+  const cardCount = track.children.length / 2
+  assert.equal(track.children.length, 16)
+  assert.equal(track.children[0].querySelector('h3').textContent, 'CineVerse')
+  assert.equal(track.children[0].querySelector('a').getAttribute('href'), 'projects.html#cineverse')
+  for (const clone of track.children.slice(cardCount)) {
     assert.equal(clone.getAttribute('aria-hidden'), 'true')
     assert(clone.querySelectorAll('a').every(link => link.tabIndex === -1))
   }
@@ -169,7 +172,7 @@ for (const page of Object.keys(fixtures)) {
   slider.emit('wheel', { deltaX: 0, deltaY: 120, shiftKey: false })
   assert.equal(frames.size, 1, 'Vertical page scrolling must not stop the loop')
   for (let time = 2064; time < 65000; time += 64) tick(time)
-  assert(displacement() < 1740, 'Continuous motion must wrap at the first duplicate')
+  assert(displacement() < cardCount * 348, 'Continuous motion must wrap at the first duplicate')
   assert.equal(document.querySelector('[data-carousel]'), null, 'Carousel must have no buttons')
   slider.emit('focusin')
   slider.scrollLeft = 0
@@ -179,7 +182,7 @@ for (const page of Object.keys(fixtures)) {
   slider.emit('keydown', { key: 'ArrowLeft' })
   assert.equal(slider.scrollLeft, 0)
   slider.emit('keydown', { key: 'ArrowLeft' })
-  assert.equal(slider.scrollLeft, 1392, 'Previous wraps to last real card')
+  assert.equal(slider.scrollLeft, (cardCount - 1) * 348, 'Previous wraps to last real card')
   const reduced = setup('index.html', { reduced: true })
   assert.equal(reduced.frames.size, 1, 'The explicitly requested loop remains active')
   slider.emit('focusout', { relatedTarget: null })
